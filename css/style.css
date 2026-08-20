@@ -1,1 +1,1363 @@
+/* =====================================================
+   MIDORI TEXTIL
+   ESTILOS PRINCIPALES
+===================================================== */
 
+:root {
+
+    --green-dark: #10251d;
+    --green: #1d5a43;
+    --green-light: #3b8765;
+
+    --cream: #f6f2e9;
+    --cream-dark: #e9e3d5;
+
+    --white: #ffffff;
+    --black: #171717;
+
+    --gray: #777777;
+    --border: #dedbd2;
+
+    --shadow:
+        0 20px 60px rgba(0, 0, 0, 0.08);
+
+    --radius: 20px;
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: var(--cream);
+
+    color: var(--black);
+
+    line-height: 1.5;
+}
+
+
+button,
+a {
+    font-family: inherit;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+.container {
+
+    width: min(
+        1180px,
+        calc(100% - 40px)
+    );
+
+    margin: auto;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    background:
+        rgba(246, 242, 233, 0.94);
+
+    backdrop-filter:
+        blur(15px);
+
+    border-bottom:
+        1px solid rgba(0, 0, 0, 0.06);
+}
+
+
+.header-content {
+
+    min-height: 78px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.logo {
+
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 1;
+}
+
+
+.logo-main {
+
+    font-size: 24px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    color:
+        var(--green-dark);
+}
+
+
+.logo-sub {
+
+    margin-top: 4px;
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    color:
+        var(--green);
+}
+
+
+.header-button {
+
+    padding:
+        11px 20px;
+
+    border:
+        1px solid var(--green);
+
+    border-radius: 50px;
+
+    color:
+        var(--green);
+
+    font-weight: 700;
+
+    font-size: 14px;
+
+    transition: 0.25s;
+}
+
+
+.header-button:hover {
+
+    background:
+        var(--green);
+
+    color:
+        white;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    min-height:
+        650px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    background:
+        var(--cream);
+}
+
+
+.hero-content {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    align-items:
+        center;
+
+    gap:
+        60px;
+}
+
+
+.eyebrow {
+
+    display:
+        inline-block;
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        3px;
+
+    color:
+        var(--green);
+
+    margin-bottom:
+        14px;
+}
+
+
+.hero h1 {
+
+    font-size:
+        clamp(48px, 7vw, 86px);
+
+    line-height:
+        0.95;
+
+    letter-spacing:
+        -4px;
+
+    color:
+        var(--green-dark);
+}
+
+
+.hero h1 span {
+
+    color:
+        var(--green);
+}
+
+
+.hero p {
+
+    max-width:
+        520px;
+
+    margin:
+        30px 0;
+
+    color:
+        #5d5d5d;
+
+    font-size:
+        18px;
+}
+
+
+.primary-button {
+
+    display:
+        inline-flex;
+
+    padding:
+        16px 28px;
+
+    background:
+        var(--green);
+
+    color:
+        white;
+
+    border-radius:
+        50px;
+
+    font-weight:
+        700;
+
+    transition:
+        0.25s;
+}
+
+
+.primary-button:hover {
+
+    background:
+        var(--green-dark);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =====================================================
+   HERO POLO
+===================================================== */
+
+.hero-preview {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+}
+
+
+.hero-shirt {
+
+    position:
+        relative;
+
+    width:
+        330px;
+
+    height:
+        380px;
+
+    background:
+        #171717;
+
+    clip-path:
+        polygon(
+            23% 0,
+            39% 8%,
+            61% 8%,
+            77% 0,
+            100% 25%,
+            84% 38%,
+            76% 29%,
+            76% 100%,
+            24% 100%,
+            24% 29%,
+            16% 38%,
+            0 25%
+        );
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.hero-shirt-design {
+
+    position:
+        absolute;
+
+    top:
+        42%;
+
+    left:
+        50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    color:
+        white;
+
+    font-size:
+        30px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        5px;
+}
+
+
+/* =====================================================
+   PERSONALIZADOR
+===================================================== */
+
+.customizer-section {
+
+    padding:
+        100px 0;
+
+    background:
+        white;
+}
+
+
+.section-heading {
+
+    text-align:
+        center;
+
+    margin-bottom:
+        60px;
+}
+
+
+.section-heading h2 {
+
+    font-size:
+        clamp(36px, 5vw, 54px);
+
+    color:
+        var(--green-dark);
+
+    letter-spacing:
+        -2px;
+}
+
+
+.section-heading p {
+
+    margin-top:
+        10px;
+
+    color:
+        var(--gray);
+}
+
+
+/* =====================================================
+   CUSTOMIZER
+===================================================== */
+
+.customizer {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1.15fr 0.85fr;
+
+    gap:
+        30px;
+
+    align-items:
+        start;
+}
+
+
+.options-panel {
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        var(--radius);
+
+    background:
+        white;
+
+    overflow:
+        hidden;
+}
+
+
+.option-group {
+
+    padding:
+        28px;
+
+    border-bottom:
+        1px solid var(--border);
+}
+
+
+.option-group:last-child {
+    border-bottom: none;
+}
+
+
+.option-title {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    margin-bottom:
+        20px;
+}
+
+
+.option-title > div {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+}
+
+
+.option-title h3 {
+
+    font-size:
+        18px;
+
+    color:
+        var(--green-dark);
+}
+
+
+.step {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    width:
+        30px;
+
+    height:
+        30px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--cream);
+
+    color:
+        var(--green);
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+}
+
+
+.selected-label {
+
+    font-size:
+        13px;
+
+    color:
+        var(--green);
+
+    font-weight:
+        700;
+}
+
+
+/* =====================================================
+   DISEÑOS
+===================================================== */
+
+.designs-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        12px;
+}
+
+
+.design-card {
+
+    position:
+        relative;
+
+    border:
+        2px solid transparent;
+
+    border-radius:
+        14px;
+
+    overflow:
+        hidden;
+
+    background:
+        #f4f4f4;
+
+    transition:
+        0.2s;
+}
+
+
+.design-card:hover {
+
+    transform:
+        translateY(-2px);
+}
+
+
+.design-card.selected {
+
+    border-color:
+        var(--green);
+}
+
+
+.design-card button {
+
+    width:
+        100%;
+
+    border:
+        none;
+
+    background:
+        transparent;
+
+    padding:
+        0;
+}
+
+
+.design-card img {
+
+    width:
+        100%;
+
+    aspect-ratio:
+        1;
+
+    object-fit:
+        cover;
+}
+
+
+.design-name {
+
+    display:
+        block;
+
+    padding:
+        9px;
+
+    font-size:
+        12px;
+
+    font-weight:
+        700;
+
+    background:
+        white;
+}
+
+
+.design-card.sold-out {
+
+    display:
+        none;
+}
+
+
+/* =====================================================
+   COLORES
+===================================================== */
+
+.colors-container {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        14px;
+}
+
+
+.color-option {
+
+    position:
+        relative;
+
+    width:
+        42px;
+
+    height:
+        42px;
+
+    border-radius:
+        50%;
+
+    border:
+        2px solid white;
+
+    box-shadow:
+        0 0 0 1px #ccc;
+
+    transition:
+        0.2s;
+}
+
+
+.color-option.selected {
+
+    box-shadow:
+        0 0 0 2px var(--green);
+
+    transform:
+        scale(1.08);
+}
+
+
+.color-option:hover {
+
+    transform:
+        scale(1.08);
+}
+
+
+/* =====================================================
+   TALLAS
+===================================================== */
+
+.size-category {
+
+    margin-bottom:
+        20px;
+}
+
+
+.size-category:last-child {
+    margin-bottom: 0;
+}
+
+
+.size-label {
+
+    display:
+        block;
+
+    margin-bottom:
+        10px;
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        1px;
+
+    color:
+        var(--gray);
+}
+
+
+.sizes-container {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        8px;
+}
+
+
+.size-button {
+
+    min-width:
+        50px;
+
+    padding:
+        11px 14px;
+
+    background:
+        white;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        10px;
+
+    font-weight:
+        700;
+
+    transition:
+        0.2s;
+}
+
+
+.size-button:hover,
+.size-button.selected {
+
+    background:
+        var(--green);
+
+    border-color:
+        var(--green);
+
+    color:
+        white;
+}
+
+
+/* =====================================================
+   CANTIDAD
+===================================================== */
+
+.quantity-control {
+
+    width:
+        fit-content;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        12px;
+
+    overflow:
+        hidden;
+}
+
+
+.quantity-control button {
+
+    width:
+        45px;
+
+    height:
+        45px;
+
+    border:
+        none;
+
+    background:
+        var(--cream);
+
+    font-size:
+        22px;
+
+    color:
+        var(--green-dark);
+}
+
+
+.quantity-control span {
+
+    width:
+        55px;
+
+    text-align:
+        center;
+
+    font-weight:
+        800;
+}
+
+
+/* =====================================================
+   PREVISUALIZACIÓN
+===================================================== */
+
+.preview-panel {
+
+    position:
+        sticky;
+
+    top:
+        100px;
+
+    padding:
+        30px;
+
+    border-radius:
+        var(--radius);
+
+    background:
+        var(--cream);
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.preview-header h3 {
+
+    font-size:
+        25px;
+
+    color:
+        var(--green-dark);
+}
+
+
+/* =====================================================
+   MOCKUP POLO
+===================================================== */
+
+.shirt-preview {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    max-width:
+        430px;
+
+    height:
+        450px;
+
+    margin:
+        20px auto;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+}
+
+
+.shirt-preview::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        300px;
+
+    height:
+        360px;
+
+    background:
+        var(--shirt-color, #171717);
+
+    clip-path:
+        polygon(
+            23% 0,
+            39% 8%,
+            61% 8%,
+            77% 0,
+            100% 25%,
+            84% 38%,
+            76% 29%,
+            76% 100%,
+            24% 100%,
+            24% 29%,
+            16% 38%,
+            0 25%
+        );
+
+    filter:
+        drop-shadow(
+            0 20px 25px
+            rgba(0,0,0,0.15)
+        );
+}
+
+
+.shirt-design {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    width:
+        145px;
+
+    height:
+        145px;
+
+    background:
+        url("../assets/diseños/diseño-001.png")
+        center / contain
+        no-repeat;
+
+    margin-top:
+        10px;
+}
+
+
+/* =====================================================
+   RESUMEN
+===================================================== */
+
+.order-summary {
+
+    padding:
+        20px 0;
+
+    border-top:
+        1px solid rgba(0,0,0,0.1);
+
+    border-bottom:
+        1px solid rgba(0,0,0,0.1);
+}
+
+
+.order-summary h3 {
+
+    margin-bottom:
+        12px;
+
+    color:
+        var(--green-dark);
+}
+
+
+.summary-row {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    padding:
+        7px 0;
+
+    font-size:
+        14px;
+}
+
+
+.summary-row span {
+    color:
+        var(--gray);
+}
+
+
+/* =====================================================
+   WHATSAPP
+===================================================== */
+
+.whatsapp-button {
+
+    width:
+        100%;
+
+    margin-top:
+        20px;
+
+    padding:
+        17px 20px;
+
+    border:
+        none;
+
+    border-radius:
+        50px;
+
+    background:
+        #25D366;
+
+    color:
+        white;
+
+    font-size:
+        15px;
+
+    font-weight:
+        800;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    transition:
+        0.25s;
+}
+
+
+.whatsapp-button:hover {
+
+    transform:
+        translateY(-2px);
+
+    filter:
+        brightness(0.95);
+}
+
+
+.arrow {
+
+    font-size:
+        20px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+
+    padding:
+        50px 0;
+
+    text-align:
+        center;
+
+    background:
+        var(--green-dark);
+
+    color:
+        white;
+}
+
+
+.footer-brand {
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        4px;
+}
+
+
+.footer p {
+
+    margin:
+        10px 0 20px;
+
+    color:
+        #b8c7bf;
+}
+
+
+.footer span {
+
+    font-size:
+        12px;
+
+    color:
+        #899a91;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .hero-content {
+
+        grid-template-columns:
+            1fr;
+
+        text-align:
+            center;
+
+        padding:
+            70px 0;
+    }
+
+
+    .hero p {
+
+        margin-left:
+            auto;
+
+        margin-right:
+            auto;
+    }
+
+
+    .hero-preview {
+
+        margin-top:
+            20px;
+    }
+
+
+    .customizer {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .preview-panel {
+
+        position:
+            relative;
+
+        top:
+            auto;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .container {
+
+        width:
+            min(
+                100% - 24px,
+                1180px
+            );
+    }
+
+
+    .header-content {
+
+        min-height:
+            68px;
+    }
+
+
+    .logo-main {
+
+        font-size:
+            20px;
+    }
+
+
+    .header-button {
+
+        padding:
+            9px 14px;
+
+        font-size:
+            12px;
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            54px;
+
+        letter-spacing:
+            -3px;
+    }
+
+
+    .hero-shirt {
+
+        width:
+            260px;
+
+        height:
+            300px;
+    }
+
+
+    .customizer-section {
+
+        padding:
+            70px 0;
+    }
+
+
+    .option-group {
+
+        padding:
+            20px;
+    }
+
+
+    .designs-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .preview-panel {
+
+        padding:
+            20px;
+    }
+
+
+    .shirt-preview {
+
+        height:
+            370px;
+    }
+
+
+    .shirt-preview::before {
+
+        width:
+            250px;
+
+        height:
+            300px;
+    }
+
+}
