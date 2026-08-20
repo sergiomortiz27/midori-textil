@@ -50,6 +50,7 @@ const diseños = [
         id: 1,
         nombre: "Diseño #001",
         imagen: "assets/diseños/diseño-001.png",
+        categoria: "Anime",
         disponible: true
     },
 
@@ -57,6 +58,7 @@ const diseños = [
         id: 2,
         nombre: "Diseño #002",
         imagen: "assets/diseños/diseño-002.png",
+        categoria: "Anime",
         disponible: true
     },
 
@@ -64,6 +66,7 @@ const diseños = [
         id: 3,
         nombre: "Diseño #003",
         imagen: "assets/diseños/diseño-003.png",
+        categoria: "Gaming",
         disponible: true
     },
 
@@ -71,6 +74,7 @@ const diseños = [
         id: 4,
         nombre: "Diseño #004",
         imagen: "assets/diseños/diseño-004.png",
+        categoria: "Frase",
         disponible: false
     }
 
@@ -94,39 +98,35 @@ const colores = [
     },
 
     {
-        nombre: "Rojo",
-        codigo: "#c62828"
+        nombre: "Beige",
+        codigo: "#c4a98b"
+    },
+
+    {
+        nombre: "Lilac",
+        codigo: "#d2c9fe"
+    },
+
+    {
+        nombre: "Aqua",
+        codigo: "#99fbda"
+    },
+
+    {
+        nombre: "Rosa",
+        codigo: "#ffb6d9"
+    },
+
+    {
+        nombre: "Aquamarine",
+        codigo: "#9fc4d6"
     },
 
     {
         nombre: "Azul",
-        codigo: "#2457a6"
-    },
-
-    {
-        nombre: "Verde",
-        codigo: "#28734a"
-    },
-
-    {
-        nombre: "Amarillo",
-        codigo: "#e3b72f"
-    },
-
-    {
-        nombre: "Rosado",
-        codigo: "#e59aa8"
-    },
-
-    {
-        nombre: "Celeste",
-        codigo: "#83c9df"
-    },
-
-    {
-        nombre: "Gris",
-        codigo: "#858585"
+        codigo: "#202c44"
     }
+    
 
 ];
 
@@ -181,6 +181,12 @@ const designsContainer =
     document.getElementById(
         "designsContainer"
     );
+
+const categoriesContainer =
+    document.getElementById(
+        "categoriesContainer"
+    );
+let categoriaActual = "Todos";
 
 
 const colorsContainer =
@@ -250,6 +256,76 @@ const summaryQuantity =
 
 
 /* =====================================================
+   RENDER CATEGORIAS
+===================================================== */
+
+function renderCategorias() {
+
+    categoriesContainer.innerHTML = "";
+
+    const categorias = [
+        "Todos",
+        ...new Set(
+            diseños
+                .filter(diseño => diseño.disponible)
+                .map(diseño => diseño.categoria)
+        )
+    ];
+
+
+    categorias.forEach(
+        categoria => {
+
+            const button =
+                document.createElement("button");
+
+
+            button.type = "button";
+
+            button.className =
+                "category-button";
+
+
+            button.textContent =
+                categoria;
+
+
+            if (
+                categoriaActual === categoria
+            ) {
+
+                button.classList.add(
+                    "active"
+                );
+
+            }
+
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    categoriaActual =
+                        categoria;
+
+                    renderCategorias();
+
+                    renderDiseños();
+
+                }
+            );
+
+
+            categoriesContainer.appendChild(
+                button
+            );
+
+        }
+    );
+}
+
+
+/* =====================================================
    RENDER DISEÑOS
 ===================================================== */
 
@@ -260,7 +336,19 @@ function renderDiseños() {
 
     diseños
         .filter(
-            diseño => diseño.disponible
+            diseño => {
+
+                if (!diseño.disponible) {
+                    return false;
+                }
+
+                if (categoriaActual === "Todos") {
+                    return true;
+                }
+
+                return diseño.categoria === categoriaActual;
+
+            }
         )
         .forEach(
             diseño => {
@@ -325,19 +413,11 @@ function renderDiseños() {
                     diseño.nombre;
 
 
-                button.appendChild(
-                    image
-                );
+                button.appendChild(image);
 
+                button.appendChild(name);
 
-                button.appendChild(
-                    name
-                );
-
-
-                card.appendChild(
-                    button
-                );
+                card.appendChild(button);
 
 
                 button.addEventListener(
@@ -681,6 +761,8 @@ Quisiera confirmar disponibilidad y precio. ¡Gracias!`;
 /* =====================================================
    INICIALIZACIÓN
 ===================================================== */
+
+renderCategorias();
 
 renderDiseños();
 
