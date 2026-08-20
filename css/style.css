@@ -1032,44 +1032,28 @@ img {
 }
 
 
-.shirt-preview::before {
-
-    content:
-        "";
+.shirt-base {
 
     position:
         absolute;
 
     width:
-        300px;
+        90%;
+
+    max-width:
+        380px;
 
     height:
-        360px;
+        auto;
 
-    background:
-        var(--shirt-color, #171717);
+    object-fit:
+        contain;
 
-    clip-path:
-        polygon(
-            23% 0,
-            39% 8%,
-            61% 8%,
-            77% 0,
-            100% 25%,
-            84% 38%,
-            76% 29%,
-            76% 100%,
-            24% 100%,
-            24% 29%,
-            16% 38%,
-            0 25%
-        );
+    z-index:
+        1;
 
-    filter:
-        drop-shadow(
-            0 20px 25px
-            rgba(0,0,0,0.15)
-        );
+    transition:
+        filter 0.3s ease;
 }
 
 
