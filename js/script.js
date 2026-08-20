@@ -212,6 +212,8 @@ const shirtPreview =
         "shirtPreview"
     );
 
+const shirtBase =
+    document.getElementById("shirtBase");
 
 const shirtDesign =
     document.getElementById(
@@ -615,6 +617,11 @@ function crearBotonTalla(
 
 function actualizarVista() {
 
+    shirtBase.style.filter =
+        obtenerFiltroColor(
+            pedido.color.codigo
+        );  
+
     if (!pedido.diseño) {
         return;
     }
@@ -662,6 +669,53 @@ function actualizarVista() {
         pedido.cantidad;
 
 }
+
+
+/* =====================================================
+   FILTROS COLORES
+===================================================== */
+
+function obtenerFiltroColor(color) {
+
+    const filtros = {
+
+        // Negro
+        "#171717":
+            "brightness(0.12)",
+
+        // Blanco
+        "#ffffff":
+            "brightness(1.05)",
+
+        // Beige
+        "#c4a98b":
+            "sepia(0.35) saturate(1.7) brightness(0.8)",
+
+        // Lilac
+        "#d2c9fe":
+            "sepia(0.35) saturate(1.8) hue-rotate(205deg) brightness(0.9)",
+
+        // Aqua
+        "#99fbda":
+            "sepia(0.25) saturate(1.5) hue-rotate(100deg) brightness(1)",
+
+        // Rosa
+        "#ffb6d9":
+            "sepia(0.2) saturate(1.8) hue-rotate(300deg) brightness(1)",
+
+        // Aquamarine
+        "#9fc4d6":
+            "sepia(0.2) saturate(1.4) hue-rotate(165deg) brightness(1)",
+
+        // Azul
+        "#202c44":
+            "sepia(0.5) saturate(4) hue-rotate(175deg) brightness(0.4) contrast(1.15)"
+
+    };
+
+    return filtros[color.toLowerCase()] || "none";
+}
+
 
 
 /* =====================================================
