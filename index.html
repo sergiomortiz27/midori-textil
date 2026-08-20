@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Midori Textil | Polos Personalizados</title>
+
+    <meta
+        name="description"
+        content="Diseña tu polo personalizado en Midori Textil. Elige tu diseño, color, talla y cantidad. Compra fácilmente por WhatsApp."
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="container header-content">
+
+            <a href="#" class="logo">
+                <span class="logo-main">MIDORI</span>
+                <span class="logo-sub">TEXTIL</span>
+            </a>
+
+            <a href="#personalizador" class="header-button">
+                Personalizar
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="container hero-content">
+
+                <div class="hero-text">
+
+                    <span class="eyebrow">
+                        POLOS PERSONALIZADOS
+                    </span>
+
+                    <h1>
+                        Tu diseño.<br>
+                        Tu polo.
+                        <span>Tu estilo.</span>
+                    </h1>
+
+                    <p>
+                        Elige el diseño que más te guste,
+                        selecciona el color, talla y cantidad.
+                        Nosotros hacemos el resto.
+                    </p>
+
+                    <a href="#personalizador" class="primary-button">
+                        Crear mi polo
+                    </a>
+
+                </div>
+
+                <div class="hero-preview">
+
+                    <div class="hero-shirt">
+                        <div class="hero-shirt-design">
+                            MIDORI
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PERSONALIZADOR ================= -->
+
+        <section id="personalizador" class="customizer-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="eyebrow">
+                        PERSONALIZA TU POLO
+                    </span>
+
+                    <h2>
+                        Crea tu pedido
+                    </h2>
+
+                    <p>
+                        Selecciona cada opción y observa cómo quedará tu polo.
+                    </p>
+
+                </div>
+
+
+                <div class="customizer">
+
+                    <!-- ================= OPCIONES ================= -->
+
+                    <div class="options-panel">
+
+
+                        <!-- DISEÑOS -->
+
+                        <div class="option-group">
+
+                            <div class="option-title">
+
+                                <div>
+                                    <span class="step">01</span>
+
+                                    <h3>
+                                        Elige tu diseño
+                                    </h3>
+                                </div>
+
+                            </div>
+
+                            <div
+                                id="designsContainer"
+                                class="designs-grid">
+                            </div>
+
+                        </div>
+
+
+                        <!-- COLOR -->
+
+                        <div class="option-group">
+
+                            <div class="option-title">
+
+                                <div>
+                                    <span class="step">02</span>
+
+                                    <h3>
+                                        Elige el color
+                                    </h3>
+                                </div>
+
+                                <span
+                                    id="selectedColorName"
+                                    class="selected-label">
+                                    Negro
+                                </span>
+
+                            </div>
+
+                            <div
+                                id="colorsContainer"
+                                class="colors-container">
+                            </div>
+
+                        </div>
+
+
+                        <!-- TALLA -->
+
+                        <div class="option-group">
+
+                            <div class="option-title">
+
+                                <div>
+                                    <span class="step">03</span>
+
+                                    <h3>
+                                        Elige la talla
+                                    </h3>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="size-category">
+
+                                <span class="size-label">
+                                    Adulto
+                                </span>
+
+                                <div
+                                    id="adultSizes"
+                                    class="sizes-container">
+                                </div>
+
+                            </div>
+
+
+                            <div class="size-category">
+
+                                <span class="size-label">
+                                    Niño
+                                </span>
+
+                                <div
+                                    id="childSizes"
+                                    class="sizes-container">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- CANTIDAD -->
+
+                        <div class="option-group">
+
+                            <div class="option-title">
+
+                                <div>
+
+                                    <span class="step">04</span>
+
+                                    <h3>
+                                        Cantidad
+                                    </h3>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="quantity-control">
+
+                                <button
+                                    id="decreaseQuantity"
+                                    type="button">
+                                    −
+                                </button>
+
+                                <span id="quantity">
+                                    1
+                                </span>
+
+                                <button
+                                    id="increaseQuantity"
+                                    type="button">
+                                    +
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- ================= PREVISUALIZACIÓN ================= -->
+
+                    <aside class="preview-panel">
+
+                        <div class="preview-header">
+
+                            <span class="eyebrow">
+                                VISTA PREVIA
+                            </span>
+
+                            <h3>
+                                Así quedará tu polo
+                            </h3>
+
+                        </div>
+
+
+                        <div
+                            id="shirtPreview"
+                            class="shirt-preview">
+
+                            <div
+                                id="shirtDesign"
+                                class="shirt-design">
+                            </div>
+
+                        </div>
+
+
+                        <!-- RESUMEN -->
+
+                        <div class="order-summary">
+
+                            <h3>
+                                Resumen
+                            </h3>
+
+                            <div class="summary-row">
+
+                                <span>
+                                    Diseño
+                                </span>
+
+                                <strong id="summaryDesign">
+                                    Diseño #001
+                                </strong>
+
+                            </div>
+
+
+                            <div class="summary-row">
+
+                                <span>
+                                    Color
+                                </span>
+
+                                <strong id="summaryColor">
+                                    Negro
+                                </strong>
+
+                            </div>
+
+
+                            <div class="summary-row">
+
+                                <span>
+                                    Talla
+                                </span>
+
+                                <strong id="summarySize">
+                                    M
+                                </strong>
+
+                            </div>
+
+
+                            <div class="summary-row">
+
+                                <span>
+                                    Cantidad
+                                </span>
+
+                                <strong id="summaryQuantity">
+                                    1
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            id="whatsappButton"
+                            class="whatsapp-button"
+                            type="button">
+
+                            <span>
+                                Comprar por WhatsApp
+                            </span>
+
+                            <span class="arrow">
+                                →
+                            </span>
+
+                        </button>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-brand">
+                MIDORI TEXTIL
+            </div>
+
+            <p>
+                Polos personalizados hechos para ti.
+            </p>
+
+            <span>
+                © 2026 Midori Textil
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
