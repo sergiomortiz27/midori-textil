@@ -587,6 +587,61 @@ img {
         700;
 }
 
+/* =====================================================
+   CATEGORIAS
+===================================================== */
+
+.categories-container {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 20px;
+}
+
+
+.category-button {
+
+    padding: 10px 18px;
+
+    border: 1px solid var(--border);
+
+    background: white;
+
+    color: var(--green-dark);
+
+    border-radius: 50px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.category-button:hover {
+
+    border-color: var(--green);
+
+    color: var(--green);
+}
+
+
+.category-button.active {
+
+    background: var(--green);
+
+    border-color: var(--green);
+
+    color: white;
+}
+
 
 /* =====================================================
    DISEÑOS
@@ -598,10 +653,10 @@ img {
         grid;
 
     grid-template-columns:
-        repeat(3, 1fr);
+        repeat(4, 1fr);
 
     gap:
-        12px;
+        14px;
 }
 
 
