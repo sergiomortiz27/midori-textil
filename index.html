@@ -272,121 +272,49 @@
 
                     <!-- ================= PREVISUALIZACIÓN ================= -->
 
+
+                    <!-- ================= PREVISUALIZACIÓN Y CARRITO ================= -->
+
                     <aside class="preview-panel">
 
                         <div class="preview-header">
-
-                            <span class="eyebrow">
-                                VISTA PREVIA
-                            </span>
-
-                            <h3>
-                                Así quedará tu polo
-                            </h3>
-
+                            <span class="eyebrow">VISTA PREVIA</span>
+                            <h3>Así quedará tu polo</h3>
                         </div>
 
-
+                        <!-- VISTA PREVIA DEL POLO ACTUAL -->
                         <div id="shirtPreview" class="shirt-preview">
-
                             <div class="shirt-wrapper">
                                 <div id="shirtColorOverlay" class="shirt-color-overlay"></div>
-                                
-                                <img
-                                    id="shirtBase"
-                                    class="shirt-base"
-                                    src="assets/polos/polo-base.png"
-                                    alt="Polo personalizado">
-
-                                <!-- El diseño debe estar aquí adentro -->
-                                <div
-                                    id="shirtDesign"
-                                    class="shirt-design">
-                                </div>
+                                <img id="shirtBase" class="shirt-base" src="assets/polos/polo-base.png" alt="Polo personalizado">
+                                <div id="shirtDesign" class="shirt-design"></div>
                             </div>
-
                         </div>
 
+                        <!-- BOTÓN PARA AGREGAR LA CONFIGURACIÓN ACTUAL AL CARRITO -->
+                        <button id="addToCartButton" class="secondary-button" type="button">
+                            + Agregar este polo al pedido
+                        </button>
 
-                        <!-- RESUMEN -->
-
+                        <!-- RESUMEN / LISTA DE POLOS EN EL PEDIDO -->
                         <div class="order-summary">
-
-                            <h3>
-                                Resumen
-                            </h3>
-
-                            <div class="summary-row">
-
-                                <span>
-                                    Diseño
-                                </span>
-
-                                <strong id="summaryDesign">
-                                    Diseño #001
-                                </strong>
-
+                            <h3>Tu Pedido (<span id="cartCount">0</span>)</h3>
+                            
+                            <!-- Lista dinámica de productos agregados -->
+                            <div id="cartList" class="cart-list">
+                                <p class="empty-cart-text">Aún no has agregado ningún polo.</p>
                             </div>
-
-
-                            <div class="summary-row">
-
-                                <span>
-                                    Color
-                                </span>
-
-                                <strong id="summaryColor">
-                                    Negro
-                                </strong>
-
-                            </div>
-
-
-                            <div class="summary-row">
-
-                                <span>
-                                    Talla
-                                </span>
-
-                                <strong id="summarySize">
-                                    M
-                                </strong>
-
-                            </div>
-
-
-                            <div class="summary-row">
-
-                                <span>
-                                    Cantidad
-                                </span>
-
-                                <strong id="summaryQuantity">
-                                    1
-                                </strong>
-
-                            </div>
-
                         </div>
 
-
-                        <button
-                            id="whatsappButton"
-                            class="whatsapp-button"
-                            type="button">
-
-                            <span>
-                                Comprar por WhatsApp
-                            </span>
-
-                            <span class="arrow">
-                                →
-                            </span>
-
+                        <!-- BOTÓN FINAL DE WHATSAPP -->
+                        <button id="whatsappButton" class="whatsapp-button" type="button">
+                            <span>Comprar pedido por WhatsApp</span>
+                            <span class="arrow">→</span>
                         </button>
 
                     </aside>
 
+                    
                 </div>
 
             </div>
