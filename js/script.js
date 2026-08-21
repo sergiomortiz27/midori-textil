@@ -125,7 +125,18 @@ const colores = [
     {
         nombre: "Azul",
         codigo: "#202c44"
+    },
+
+    {
+        nombre: "Verde Oliva",
+        codigo: "#3f412c"
+    },
+
+    {
+        nombre: "Verde Pino",
+        codigo: "#16352e"
     }
+
     
 
 ];
@@ -617,10 +628,7 @@ function crearBotonTalla(
 
 function actualizarVista() {
 
-    shirtBase.style.filter =
-        obtenerFiltroColor(
-            pedido.color.codigo
-        );  
+    //shirtBase.style.filter = obtenerFiltroColor( pedido.color.codigo);  
 
     if (!pedido.diseño) {
         return;
@@ -672,9 +680,9 @@ function actualizarVista() {
 
 
 /* =====================================================
-   FILTROS COLORES
+   FILTROS COLORES  --  obsoleta "borrar despues"
 ===================================================== */
-
+/*
 function obtenerFiltroColor(color) {
 
     const filtros = {
@@ -709,13 +717,13 @@ function obtenerFiltroColor(color) {
 
         // Azul
         "#202c44":
-            "sepia(0.5) saturate(4) hue-rotate(175deg) brightness(0.4) contrast(1.15)"
+            "sepia(0.5) saturate(3.5) hue-rotate(180deg) brightness(0.6) contrast(1.2)"
 
     };
 
     return filtros[color.toLowerCase()] || "none";
 }
-
+*/
 
 
 /* =====================================================
