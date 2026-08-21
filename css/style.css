@@ -160,6 +160,11 @@ img {
         var(--green);
 }
 
+.logo-img {
+    height: 60px; /* Ajusta la altura a tu gusto */
+    width: auto;
+    display: block;
+}
 
 .header-button {
 
@@ -329,78 +334,40 @@ img {
 ===================================================== */
 
 .hero-preview {
-
-    display:
-        flex;
-
-    justify-content:
-        center;
-
-    align-items:
-        center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
 
 .hero-shirt {
-
-    position:
-        relative;
-
-    width:
-        330px;
-
-    height:
-        380px;
-
-    background:
-        #171717;
-
-    clip-path:
-        polygon(
-            23% 0,
-            39% 8%,
-            61% 8%,
-            77% 0,
-            100% 25%,
-            84% 38%,
-            76% 29%,
-            76% 100%,
-            24% 100%,
-            24% 29%,
-            16% 38%,
-            0 25%
-        );
-
-    box-shadow:
-        var(--shadow);
+    position: relative;
+    width: 360px; /* Tamaño general del contenedor en la sección Hero */
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+/* Imagen del polo SVG */
+.hero-shirt-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.12)); /* Sombreado suave */
+}
 
+/* Texto o estampado sobre el polo del hero */
 .hero-shirt-design {
-
-    position:
-        absolute;
-
-    top:
-        42%;
-
-    left:
-        50%;
-
-    transform:
-        translate(-50%, -50%);
-
-    color:
-        white;
-
-    font-size:
-        30px;
-
-    font-weight:
-        800;
-
-    letter-spacing:
-        5px;
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 5px;
+    pointer-events: none;
 }
 
 
@@ -1001,83 +968,80 @@ img {
 
 
 /* =====================================================
-   MOCKUP POLO
+   MOCKUP POLO  (MEZCLA DE COLOR)
 ===================================================== */
 
 .shirt-preview {
-
-    position:
-        relative;
-
-    width:
-        100%;
-
-    max-width:
-        430px;
-
-    height:
-        450px;
-
-    margin:
-        20px auto;
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    justify-content:
-        center;
+    position: relative;
+    width: 100%;
+    max-width: 430px;
+    height: 450px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
-.shirt-base {
-
-    position:
-        absolute;
-
-    width:
-        90%;
-
-    max-width:
-        380px;
-
-    height:
-        auto;
-
-    object-fit:
-        contain;
-
-    z-index:
-        1;
-
-    transition:
-        filter 0.3s ease;
+.shirt-wrapper {
+    position: relative;
+    width: 90%;
+    max-width: 380px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-
+/* Posiciona el estampado centrado en el pecho */
 .shirt-design {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    width: 130px;
+    height: 130px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+}
 
-    position:
-        relative;
+/* Capa de color real */
+.shirt-color-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: var(--shirt-color, #171717);
+    
+    /* Multiplica el color con las sombras del polo base */
+    mix-blend-mode: multiply;
+    
+    /* Recorta el color exactamente a la forma del PNG base */
+    -webkit-mask-image: url("../assets/polos/polo-base.png");
+    mask-image: url("../assets/polos/polo-base.png");
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    
+    transition: background-color 0.3s ease;
+}
 
-    z-index:
-        2;
-
-    width:
-        145px;
-
-    height:
-        145px;
-
-    background:
-        url("../assets/diseños/diseño-001.png")
-        center / contain
-        no-repeat;
-
-    margin-top:
-        10px;
+/* Diseño superpuesto */
+.shirt-design {
+    position: absolute;
+    z-index: 4;
+    width: 145px;
+    height: 145px;
+    background: url("../assets/diseños/diseño-001.png") center / contain no-repeat;
+    margin-top: 10px;
 }
 
 
@@ -1348,10 +1312,15 @@ img {
     .hero-shirt {
 
         width:
-            260px;
+            280px;
 
         height:
             300px;
+    }
+
+
+    .hero-shirt-design {
+        font-size: 22px;
     }
 
 
