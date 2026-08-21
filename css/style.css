@@ -202,36 +202,23 @@ img {
 ===================================================== */
 
 .hero {
-
-    min-height:
-        650px;
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    background:
-        var(--cream);
+    position: relative;
+    min-height: 650px;
+    height: calc(100vh - 78px); /* Ocupa el alto de la pantalla menos el header */
+    max-height: 800px; /* Límite en monitores muy grandes */
+    display: flex;
+    align-items: center;
+    background: var(--cream);
+    overflow: hidden; /* Evita desbordamientos */
 }
-
 
 .hero-content {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    align-items:
-        center;
-
-    gap:
-        60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+    height: 100%; /* Permite que el contenido tome todo el alto */
 }
-
 
 .eyebrow {
 
@@ -336,26 +323,38 @@ img {
 .hero-preview {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end; /* Pega la imagen a la base inferior */
+    height: 100%;
+    position: relative;
 }
 
 .hero-shirt {
     position: relative;
-    width: 360px; /* Tamaño general del contenedor en la sección Hero */
-    max-width: 100%;
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 }
 
-/* Imagen del polo SVG */
+/* La imagen ajusta su escala al 100% del alto del Hero */
+.hero-shirt img,
+.hero-shirt-img {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain; /* Mantiene la proporción de la foto */
+    object-position: bottom center; /* Centra y alinea a la base */
+}
+
+/* Imagen del polo SVG 
 .hero-shirt-img {
     width: 100%;
     height: auto;
     display: block;
     object-fit: contain;
     filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.12)); /* Sombreado suave */
-}
+}*/
 
 /* Texto o estampado sobre el polo del hero */
 .hero-shirt-design {
@@ -1214,16 +1213,16 @@ img {
 
 @media (max-width: 900px) {
 
+    .hero {
+        height: auto; /* Permite crecimiento natural en móviles */
+        min-height: auto;
+        padding-top: 40px;
+    }
+
     .hero-content {
-
-        grid-template-columns:
-            1fr;
-
-        text-align:
-            center;
-
-        padding:
-            70px 0;
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 40px 0 0 0;
     }
 
 
@@ -1238,9 +1237,8 @@ img {
 
 
     .hero-preview {
-
-        margin-top:
-            20px;
+        height: 420px; /* Limita la altura de la modelo en celulares */
+        margin-top: -40px;
     }
 
 
@@ -1264,6 +1262,27 @@ img {
 
 
 @media (max-width: 600px) {
+
+    .hero {
+        padding-top: 20px;
+    }
+
+    /* Reducimos el alto de la imagen para dar prioridad al texto y botones */
+    .hero-preview {
+        height: 320px;
+        margin-top: 15px;
+    }
+
+    /* Ajuste fino de tipografía para que el texto encaje bien arriba */
+    .hero-title {
+        font-size: 2.2rem;
+        line-height: 1.15;
+    }
+
+    .hero-text {
+        font-size: 0.95rem;
+    }
+
 
     .container {
 
