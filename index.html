@@ -23,8 +23,11 @@
         <div class="container header-content">
 
             <a href="#" class="logo">
+                <!-- antiguo logo textual 
                 <span class="logo-main">MIDORI</span>
                 <span class="logo-sub">TEXTIL</span>
+                -->
+                <img src="assets/logo/midori-textil-logo.svg" alt="Midori Textil" class="logo-img">
             </a>
 
             <a href="#personalizador" class="header-button">
@@ -71,9 +74,13 @@
                 <div class="hero-preview">
 
                     <div class="hero-shirt">
+                        <!-- Imagen del polo SVG -->
+                        <img src="assets/polos/hero-shirt.svg" alt="Polo personalizado Midori" class="hero-shirt-img">
+                        <!-- Texto obsoleto
                         <div class="hero-shirt-design">
                             MIDORI
                         </div>
+                        -->
                     </div>
 
                 </div>
@@ -282,15 +289,20 @@
 
                         <div id="shirtPreview" class="shirt-preview">
 
-                            <img
-                                id="shirtBase"
-                                class="shirt-base"
-                                src="assets/polos/polo-base.png"
-                                alt="Polo personalizado">
+                            <div class="shirt-wrapper">
+                                <div id="shirtColorOverlay" class="shirt-color-overlay"></div>
+                                
+                                <img
+                                    id="shirtBase"
+                                    class="shirt-base"
+                                    src="assets/polos/polo-base.png"
+                                    alt="Polo personalizado">
 
-                            <div
-                                id="shirtDesign"
-                                class="shirt-design">
+                                <!-- El diseño debe estar aquí adentro -->
+                                <div
+                                    id="shirtDesign"
+                                    class="shirt-design">
+                                </div>
                             </div>
 
                         </div>
