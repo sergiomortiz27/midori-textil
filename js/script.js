@@ -13,13 +13,20 @@ const diseños = [
     { id: 2, nombre: "Diseño #002", imagen: "assets/diseños/diseño-002.png", categoria: "Frases", disponible: true },
     { id: 3, nombre: "Diseño #003", imagen: "assets/diseños/diseño-003.png", categoria: "Frases", disponible: true },
     { id: 4, nombre: "Diseño #004", imagen: "assets/diseños/diseño-004.png", categoria: "Snoopy", disponible: true},
-    { id: 4, nombre: "Diseño #005", imagen: "assets/diseños/diseño-005.png", categoria: "Flores", disponible: true},
-    { id: 4, nombre: "Diseño #006", imagen: "assets/diseños/diseño-006.png", categoria: "Otros", disponible: true},
-    { id: 4, nombre: "Diseño #007", imagen: "assets/diseños/diseño-007.png", categoria: "Otros", disponible: true},
-    { id: 4, nombre: "Diseño #008", imagen: "assets/diseños/diseño-008.png", categoria: "Flores", disponible: true},
-    { id: 4, nombre: "Diseño #009", imagen: "assets/diseños/diseño-009.png", categoria: "Playa", disponible: true},
-    { id: 4, nombre: "Diseño #0010", imagen: "assets/diseños/diseño-0010.png", categoria: "Otros", disponible: true},
-    { id: 4, nombre: "Diseño #0011", imagen: "assets/diseños/diseño-0011.png", categoria: "Snoopy", disponible: false}
+    { id: 5, nombre: "Diseño #005", imagen: "assets/diseños/diseño-005.png", categoria: "Flores", disponible: true},
+    { id: 6, nombre: "Diseño #006", imagen: "assets/diseños/diseño-006.png", categoria: "Otros", disponible: true},
+    { id: 7, nombre: "Diseño #007", imagen: "assets/diseños/diseño-007.png", categoria: "Otros", disponible: true},
+    { id: 8, nombre: "Diseño #008", imagen: "assets/diseños/diseño-008.png", categoria: "Flores", disponible: true},
+    { id: 9, nombre: "Diseño #009", imagen: "assets/diseños/diseño-009.png", categoria: "Playa", disponible: true},
+    { id: 10, nombre: "Diseño #010", imagen: "assets/diseños/diseño-010.png", categoria: "Otros", disponible: true},
+    { id: 11, nombre: "Diseño #011", imagen: "assets/diseños/diseño-011.png", categoria: "Stitch", disponible: true},
+    { id: 12, nombre: "Diseño #012", imagen: "assets/diseños/diseño-012.png", categoria: "Stitch", disponible: true},
+    { id: 13, nombre: "Diseño #013", imagen: "assets/diseños/diseño-013.png", categoria: "Stitch", disponible: true},
+    { id: 14, nombre: "Diseño #014", imagen: "assets/diseños/diseño-014.png", categoria: "Frases", disponible: true},
+    { id: 15, nombre: "Diseño #015", imagen: "assets/diseños/diseño-015.png", categoria: "Frases", disponible: true},
+    { id: 16, nombre: "Diseño #016", imagen: "assets/diseños/diseño-016.png", categoria: "Hello Kitty", disponible: true},
+    { id: 17, nombre: "Diseño #017", imagen: "assets/diseños/diseño-017.png", categoria: "Hello Kitty", disponible: true},
+    { id: 18, nombre: "Diseño #018", imagen: "assets/diseños/diseño-018.png", categoria: "Hello Kitty", disponible: true}
 
 ];
 
