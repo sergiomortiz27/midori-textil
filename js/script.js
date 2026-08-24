@@ -2,17 +2,17 @@
    MIDORI TEXTIL - CONFIGURACIÓN
 ===================================================== */
 
-const WHATSAPP_NUMBER = "51940258118";
+const WHATSAPP_NUMBER = "519940258118";
 
 /* =====================================================
    DISEÑOS
 ===================================================== */
 
 const diseños = [
-    { id: 1, nombre: "Diseño #001", imagen: "assets/diseños/diseño-001.png", categoria: "Anime", disponible: true },
-    { id: 2, nombre: "Diseño #002", imagen: "assets/diseños/diseño-002.png", categoria: "Anime", disponible: true },
-    { id: 3, nombre: "Diseño #003", imagen: "assets/diseños/diseño-003.png", categoria: "Gaming", disponible: true },
-    { id: 4, nombre: "Diseño #004", imagen: "assets/diseños/diseño-004.png", categoria: "Frase", disponible: false }
+    { id: 1, nombre: "Diseño #001", imagen: "assets/diseños/diseño-001.png", categoria: "Frases", disponible: true },
+    { id: 2, nombre: "Diseño #002", imagen: "assets/diseños/diseño-002.png", categoria: "Frases", disponible: true },
+    { id: 3, nombre: "Diseño #003", imagen: "assets/diseños/diseño-003.png", categoria: "Frases", disponible: true },
+    { id: 4, nombre: "Diseño #004", imagen: "assets/diseños/diseño-004.png", categoria: "Snoopy", disponible: true}
 ];
 
 /* =====================================================
