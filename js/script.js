@@ -12,7 +12,15 @@ const diseños = [
     { id: 1, nombre: "Diseño #001", imagen: "assets/diseños/diseño-001.png", categoria: "Frases", disponible: true },
     { id: 2, nombre: "Diseño #002", imagen: "assets/diseños/diseño-002.png", categoria: "Frases", disponible: true },
     { id: 3, nombre: "Diseño #003", imagen: "assets/diseños/diseño-003.png", categoria: "Frases", disponible: true },
-    { id: 4, nombre: "Diseño #004", imagen: "assets/diseños/diseño-004.png", categoria: "Snoopy", disponible: true}
+    { id: 4, nombre: "Diseño #004", imagen: "assets/diseños/diseño-004.png", categoria: "Snoopy", disponible: true},
+    { id: 4, nombre: "Diseño #005", imagen: "assets/diseños/diseño-005.png", categoria: "Flores", disponible: true},
+    { id: 4, nombre: "Diseño #006", imagen: "assets/diseños/diseño-006.png", categoria: "Otros", disponible: true},
+    { id: 4, nombre: "Diseño #007", imagen: "assets/diseños/diseño-007.png", categoria: "Otros", disponible: true},
+    { id: 4, nombre: "Diseño #008", imagen: "assets/diseños/diseño-008.png", categoria: "Flores", disponible: true},
+    { id: 4, nombre: "Diseño #009", imagen: "assets/diseños/diseño-009.png", categoria: "Playa", disponible: true},
+    { id: 4, nombre: "Diseño #0010", imagen: "assets/diseños/diseño-0010.png", categoria: "Otros", disponible: true},
+    { id: 4, nombre: "Diseño #0011", imagen: "assets/diseños/diseño-0011.png", categoria: "Snoopy", disponible: false}
+
 ];
 
 /* =====================================================
