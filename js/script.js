@@ -27,7 +27,8 @@ const diseños = [
     { id: 16, nombre: "Diseño #016", imagen: "assets/diseños/diseño-016.png", categoria: "Hello Kitty", disponible: true},
     { id: 17, nombre: "Diseño #017", imagen: "assets/diseños/diseño-017.png", categoria: "Hello Kitty", disponible: true},
     { id: 18, nombre: "Diseño #018", imagen: "assets/diseños/diseño-018.png", categoria: "Hello Kitty", disponible: true},
-    { id: 19, nombre: "Diseño #019", imagen: "assets/diseños/diseño-019.png", categoria: "Spiderman", disponible: true}
+    { id: 19, nombre: "Diseño #019", imagen: "assets/diseños/diseño-019.png", categoria: "Spiderman", disponible: true},
+    { id: 20, nombre: "Diseño #020", imagen: "assets/diseños/diseño-020.png", categoria: "Otros", disponible: true}
 ];
 
 /* =====================================================
