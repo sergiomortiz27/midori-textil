@@ -41,7 +41,10 @@ const diseños = [
     { id: 30, nombre: "Diseño #030", imagen: "assets/diseños/diseño-030.png", categoria: "Snoopy", disponible: true},
     { id: 31, nombre: "Diseño #031", imagen: "assets/diseños/diseño-031.png", categoria: "Snoopy", disponible: true},
     { id: 32, nombre: "Diseño #032", imagen: "assets/diseños/diseño-032.png", categoria: "Snoopy", disponible: true},
-    { id: 33, nombre: "Diseño #033", imagen: "assets/diseños/diseño-033.png", categoria: "Snoopy", disponible: true}
+    { id: 33, nombre: "Diseño #033", imagen: "assets/diseños/diseño-033.png", categoria: "Snoopy", disponible: true},
+    { id: 34, nombre: "Diseño #034", imagen: "assets/diseños/diseño-034.png", categoria: "Snoopy", disponible: true},
+    { id: 35, nombre: "Diseño #035", imagen: "assets/diseños/diseño-035.png", categoria: "Snoopy", disponible: true},
+    { id: 36, nombre: "Diseño #036", imagen: "assets/diseños/diseño-036.png", categoria: "Snoopy", disponible: true}
 ];
 
 /* =====================================================
