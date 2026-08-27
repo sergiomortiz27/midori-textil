@@ -28,7 +28,10 @@ const diseños = [
     { id: 17, nombre: "Diseño #017", imagen: "assets/diseños/diseño-017.png", categoria: "Hello Kitty", disponible: true},
     { id: 18, nombre: "Diseño #018", imagen: "assets/diseños/diseño-018.png", categoria: "Hello Kitty", disponible: true},
     { id: 19, nombre: "Diseño #019", imagen: "assets/diseños/diseño-019.png", categoria: "Spiderman", disponible: true},
-    { id: 20, nombre: "Diseño #020", imagen: "assets/diseños/diseño-020.png", categoria: "Otros", disponible: true}
+    { id: 20, nombre: "Diseño #020", imagen: "assets/diseños/diseño-020.png", categoria: "Otros", disponible: true},
+    { id: 21, nombre: "Diseño #021", imagen: "assets/diseños/diseño-021.png", categoria: "Frases", disponible: true},
+    { id: 22, nombre: "Diseño #022", imagen: "assets/diseños/diseño-022.png", categoria: "Frases", disponible: true},
+    { id: 23, nombre: "Diseño #023", imagen: "assets/diseños/diseño-023.png", categoria: "Frases", disponible: true}
 ];
 
 /* =====================================================
