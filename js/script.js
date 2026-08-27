@@ -31,7 +31,17 @@ const diseños = [
     { id: 20, nombre: "Diseño #020", imagen: "assets/diseños/diseño-020.png", categoria: "Otros", disponible: true},
     { id: 21, nombre: "Diseño #021", imagen: "assets/diseños/diseño-021.png", categoria: "Frases", disponible: true},
     { id: 22, nombre: "Diseño #022", imagen: "assets/diseños/diseño-022.png", categoria: "Frases", disponible: true},
-    { id: 23, nombre: "Diseño #023", imagen: "assets/diseños/diseño-023.png", categoria: "Frases", disponible: true}
+    { id: 23, nombre: "Diseño #023", imagen: "assets/diseños/diseño-023.png", categoria: "Frases", disponible: true},
+    { id: 24, nombre: "Diseño #024", imagen: "assets/diseños/diseño-024.png", categoria: "Snoopy", disponible: true},
+    { id: 25, nombre: "Diseño #025", imagen: "assets/diseños/diseño-025.png", categoria: "Snoopy", disponible: true},
+    { id: 26, nombre: "Diseño #026", imagen: "assets/diseños/diseño-026.png", categoria: "Snoopy", disponible: true},
+    { id: 27, nombre: "Diseño #027", imagen: "assets/diseños/diseño-027.png", categoria: "Snoopy", disponible: true},
+    { id: 28, nombre: "Diseño #028", imagen: "assets/diseños/diseño-028.png", categoria: "Snoopy", disponible: true},
+    { id: 29, nombre: "Diseño #029", imagen: "assets/diseños/diseño-029.png", categoria: "Snoopy", disponible: true},
+    { id: 30, nombre: "Diseño #030", imagen: "assets/diseños/diseño-030.png", categoria: "Snoopy", disponible: true},
+    { id: 31, nombre: "Diseño #031", imagen: "assets/diseños/diseño-031.png", categoria: "Snoopy", disponible: true},
+    { id: 32, nombre: "Diseño #032", imagen: "assets/diseños/diseño-032.png", categoria: "Snoopy", disponible: true},
+    { id: 33, nombre: "Diseño #033", imagen: "assets/diseños/diseño-033.png", categoria: "Snoopy", disponible: true}
 ];
 
 /* =====================================================
